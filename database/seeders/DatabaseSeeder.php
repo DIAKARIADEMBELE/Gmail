@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
             SuperAdminSeeder::class,
             // Ajoutez d'autres seeders ici si nécessaire
         ]);
+        $this->call([
+            LyceeSubscriptionSeeder::class,
+        ]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

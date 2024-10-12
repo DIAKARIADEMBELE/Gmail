@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LyceeSubscriptionController;
+use App\Http\Controllers\ModelisationSubscriptionController;
+use App\Http\Controllers\MobileDevSubscriptionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +30,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
 Route::get('/lycee-subscriptions', [LyceeSubscriptionController::class, 'index'])->withoutMiddleware('auth');
+
+
+
+
+Route::get('/modelisation-subscriptions', [ModelisationSubscriptionController::class, 'index']);
+
+
+Route::get('/mobile-dev-subscriptions', [MobileDevSubscriptionController::class, 'index']);
+
 require __DIR__.'/auth.php';
+
